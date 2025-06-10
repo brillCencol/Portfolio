@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function Services() {
