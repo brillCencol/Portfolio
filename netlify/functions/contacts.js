@@ -1,15 +1,17 @@
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGODB_URI;
-const client = new MongoClient(uri);
 
 export async function handler(event, context) {
   if (event.httpMethod === "POST") {
     const data = JSON.parse(event.body);
+    const client = new MongoClient(uri);
+
     try {
       await client.connect();
-      const collection = client.db().collection("contacts");
+      const collection = client.db("Portfolio").collection("contacts");
       const result = await collection.insertOne(data);
+      await client.close();
 
       return {
         statusCode: 200,
