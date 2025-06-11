@@ -30,7 +30,7 @@ export default function ContactPage() {
   e.preventDefault();
 
   try {
-    const response = await fetch("https://comp229-portfolio-498n.onrender.com/api/contacts", {
+    const response = await fetch("/.netlify/functions/createContact", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

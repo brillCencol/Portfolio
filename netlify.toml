@@ -1,4 +1,16 @@
 [build]
   base = "client"
   command = "npm run build"
-  publish = "dist"
+  publish = "client/dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[build.environment]
+  MONGODB_URI = "your_mongodb_connection_string"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
