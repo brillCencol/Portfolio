@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 
-const client = new MongoClient(process.env.MONGODB_URI);
-
+// ⛔ Don't reuse the same client across Lambda invocations
+// ✅ Create a fresh client instance inside the handler
 export const handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return {
@@ -10,9 +10,18 @@ export const handler = async (event) => {
     };
   }
 
+  let client;
+
   try {
     const data = JSON.parse(event.body);
+
+    // ✅ Use the URI from environment variables
+    const uri = process.env.MONGODB_URI;
+    if (!uri) throw new Error("Missing MONGODB_URI");
+
+    client = new MongoClient(uri);
     await client.connect();
+
     const db = client.db("Portfolio");
     const result = await db.collection("contacts").insertOne(data);
 
@@ -26,6 +35,6 @@ export const handler = async (event) => {
       body: JSON.stringify({ error: err.message }),
     };
   } finally {
-    await client.close();
+    if (client) await client.close();
   }
 };
