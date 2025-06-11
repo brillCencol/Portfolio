@@ -1,14 +1,14 @@
 [build]
   base = "client"
   command = "npm run build"
-  publish = "client/dist"
+  publish = "dist"
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
 [build.environment]
-  MONGODB_URI = "your_mongodb_connection_string"
+  MONGODB_URI = "mongodb+srv://janotorino:KMj8VFX6Lbfkhk5c@cluster0.vmhqfzj.mongodb.net/Portfolio?retryWrites=true&w=majority&appName=Cluster0"
 
 [[redirects]]
   from = "/*"
