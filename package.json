@@ -32,7 +32,18 @@
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
     "method-override": "^3.0.0",
+    "mongodb": "^6.17.0",
     "mongoose": "^8.15.1",
     "mongoosh": "^0.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brillCencol/COMP229_Portfolio.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/brillCencol/COMP229_Portfolio/issues"
+  },
+  "homepage": "https://github.com/brillCencol/COMP229_Portfolio#readme",
+  "description": ""
 }
