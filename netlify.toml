@@ -10,17 +10,7 @@
 [build.environment]
   MONGODB_URI = "mongodb+srv://janotorino:KMj8VFX6Lbfkhk5c@cluster0.vmhqfzj.mongodb.net/Portfolio?retryWrites=true&w=majority&appName=Cluster0"
 
-# ✅ Redirect all API requests to Netlify functions
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
-
-# ✅ Redirect SPA routes to index.html (for React/Vite apps)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[plugins]]
-  package = "@netlify/plugin-functions-install-core"
