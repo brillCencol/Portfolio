@@ -4,22 +4,18 @@ import mongoose from 'mongoose'
 
 mongoose.Promise = global.Promise
 
-mongoose.connect(config.mongoUri, {
-  //useNewUrlParser: true,
-  //useUnifiedTopology: true
-}).then(() => {
-  console.log('✅ Connected to MongoDB:', config.mongoUri)
-}).catch((err) => {
-  console.error('❌ Could not connect to MongoDB:', err.message)
-})
+mongoose.connect(config.mongoUri)
+  .then(() => console.log('✅ Connected to MongoDB'))
+  .catch((err) => console.error('❌ Could not connect to MongoDB:', err.message))
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to User application. WITH MONGOOSE" });
-});
+  res.json({ message: "Welcome to Portfolio API. Powered by Express + Mongoose" })
+})
 
 app.listen(config.port, (err) => {
   if (err) {
-    console.log(err)
+    console.error('❌ Server failed to start:', err)
+  } else {
+    console.info(`🚀 Server running on port ${config.port}`)
   }
-  console.info('🚀 Server started on port %s.', config.port)
 })
