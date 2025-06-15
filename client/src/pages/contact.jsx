@@ -30,7 +30,7 @@ export default function ContactPage() {
   e.preventDefault();
 
   try {
-    const response = await fetch("/.netlify/functions/createContact", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contacts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
