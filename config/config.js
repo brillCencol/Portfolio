@@ -1,12 +1,13 @@
 import dotenv from 'dotenv'
-import path from 'path'
 
-dotenv.config({ path: path.resolve(process.cwd(), '../.env') })  // or just dotenv.config() for Render
+// ✅ Load .env normally (Render injects it automatically)
+dotenv.config()
 
 const config = {
+  env: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 3000,
-  jwtSecret: process.env.JWT_SECRET || 'yourSecret',
-  mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/mernproject'
+  jwtSecret: process.env.JWT_SECRET || 'YOUR_SECRET_KEY',
+  mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/mernproject'  // fallback if env not set
 }
 
 export default config
