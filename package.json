@@ -38,12 +38,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brillCencol/COMP229_Portfolio.git"
+    "url": "git+https://github.com/brillCencol/Portfolio.git"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/brillCencol/COMP229_Portfolio/issues"
+    "url": "https://github.com/brillCencol/Portfolio/issues"
   },
-  "homepage": "https://github.com/brillCencol/COMP229_Portfolio#readme",
+  "homepage": "https://github.com/brillCencol/Portfolio#readme",
   "description": ""
 }

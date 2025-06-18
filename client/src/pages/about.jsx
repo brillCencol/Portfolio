@@ -21,13 +21,16 @@ export default function AboutPage() {
             <div className="flex flex-col justify-center">
               <h2 className="text-2xl font-bold mb-4">Brill John Torino</h2>
               <p className="text-slate-600 mb-6">
-                I'm a passionate web developer with over 5 years of experience creating modern, responsive websites and
-                applications. I specialize in front-end development with expertise in React and modern JavaScript.
+                I'm a full stack web developer in training with a strong focus on backend development.
+                I build modern, responsive, and secure web applications that connect the frontend and backend seamlessly. 
+                I work primarily with Node.js, Express, and MongoDB, and 
+                I deploy backend APIs using platforms like Render. 
+                On the frontend, I use React and modern JavaScript to create clean and interactive user experiences.
               </p>
               <p className="text-slate-600 mb-6">
-                My approach combines technical expertise with creative problem-solving to deliver solutions that not
-                only meet but exceed client expectations. I'm constantly learning and exploring new technologies to stay
-                at the forefront of web development.
+                My development approach combines clean architecture, problem-solving, and continuous learning. 
+                I'm passionate about building real-world solutions through code and always exploring new tools 
+                and technologies to grow as a developer.
               </p>
               <div className="mt-4">
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">

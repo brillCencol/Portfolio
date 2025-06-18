@@ -1,6 +1,5 @@
 import dotenv from 'dotenv'
 
-// ✅ Load .env normally (Render injects it automatically)
 dotenv.config()
 
 const config = {
